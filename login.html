@@ -26,21 +26,41 @@
     <main>
             <div class="login-obrazek">
                 <h1>Úkolomet</h1>
-                <p>Mějte svoje íkoly pod kontrolou.</p>
+                <p>Mějte svoje úkoly pod kontrolou.</p>
                 <p>Po přihlášení můžete zadávat úkoly a organizovat svůj čas.</p>
             </div>
 
             <div class="login-form">
                 <h1>Vítej zpět</h1>
-                <form action="#" method="get">
+                <p>Vlož svůj email, heslo a přihlaš se do Úkolometu</p>
+                <form action="#" method="get" class="formular-login">
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="email" required>
-
+                    <input id="email" type="email" name="email" placeholder="Napiš svůj email" required>
                     <label for="password">Heslo</label>
-                    <input id="password" type="password" name="password" required>
+                    <input id="password" type="password" name="password" placeholder="Napiš své heslo" required>
+
+                    <div class="text-link-container">
+                        <label class="container-checkbox">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>Zapamatovat heslo
+                        </label>                    
+                            <div class="zapomenute-heslo">
+                                <p>Zapoměl jsi heslo?  </p><a href="#">Změnit heslo</a>
+                            </div>
+                    </div>
 
                     <button type="submit">Přihlaš se</button>
+
                 </form>
+
+                <div class="login-form-bottom">
+                    <div class="zapomenute-heslo">
+                        <p>Ještě nemám účet  </p><a href="#">Registrace</a>
+                    </div>
+                    <p>nebo se přihlas přes</p>
+                    <button>Google</button>
+                    <button>Facebook</button>
+                </div>
             </div>
     </main>
 </body>
