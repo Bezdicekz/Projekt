@@ -87,9 +87,8 @@ main {
     }
 
     .formular-login {
-        margin: 0 auto; /* Tohle zajistí horizontální vystředění */
+        margin: 0 auto;
         margin-top: 60px;
-        /* border: 1px solid black; */
         text-align: center;
         width: 70%;
     
@@ -196,8 +195,7 @@ main {
     }
 
     input:focus {
-        border-color: #006600; /* Barva okraje při fokusu */
-        box-shadow: 0 2px 10px rgba(0, 102, 0, 0.5); /* Změna stínu při fokusu */
+        border-color: var(--font-color); 
     }
     
     input::placeholder {
