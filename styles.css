@@ -1,8 +1,13 @@
 :root {
     --default-font-size: 16px;
-    --font-color: rgb(1, 67, 1);
-    --font-color-vedlejsi: rgb(1, 107, 1);
+    --font-color: rgb(1, 95, 1);
+    --font-color-vedlejsi: rgb(67, 141, 67);
+    --barva-tlacitka: rgb(0, 96, 0);
+    --barva-textu-tlacitka: rgb(213, 213, 213);
+    --barva-tlacitka-mys: rgb(126, 175, 126);
     --zaobleni-rohu: 20px;
+    --barva-popozadi: #ABF1CF;
+    --barva-stinu: rgb(141, 141, 141) 4px 6px 10px;
 }
 
 *, *::before, *::after {
@@ -19,23 +24,56 @@ img {
 }
 
 
-
-h1 {
-    color: green;
+header {
+    display: flex;
+    gap: 10px;
+    vertical-align: auto;   
+    border-bottom: 1px solid var(--font-color);
 }
 
-h1:hover{
-    color: black;
-}
+nav {
+    width: 100%;
+    margin-top: 22px;   
 
-h2 {
-    color: rgb(0, 152, 0);
-}
+    a {
+        border: 1px solid var(--font-color);
+        margin: 5px;
+        padding: 5px 10px 5px 10px;
+        border-radius: 10px;
+        background-color: var(--barva-tlacitka);
+        color: var(--barva-textu-tlacitka);
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: var(--barva-tlacitka-mys);
+        color: var(--font-color);
+    }
 
-p {
-    color: rgb(0, 87, 0);
 }
 
 main {
-    background-color: rgb(2, 230, 230);
+    display: flex;
+    width: 1150px;
+    height: 760px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: var(--zaobleni-rohu);
+    background-color: var(--barva-popozadi);
+    box-shadow: var(--barva-stinu);
+    h1 {
+        color: var(--font-color);
+    }
+}
+
+.login-obrazek {
+    width: 50%;
+    background-image: url(img/login-picture.png);
+    text-align: center;    
+    border-radius: var(--zaobleni-rohu);
+}
+
+.login-form {
+    width: 50%;
+    text-align: center;
+    
 }
