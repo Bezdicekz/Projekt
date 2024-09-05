@@ -5,7 +5,7 @@
     --barva-tlacitka: rgb(0, 96, 0);
     --barva-textu-tlacitka: rgb(213, 213, 213);
     --barva-tlacitka-mys: rgb(126, 175, 126);
-    --zaobleni-rohu: 20px;
+    --zaobleni-rohu: 7px;
     --barva-popozadi: #ABF1CF;
     --barva-stinu: rgb(141, 141, 141) 4px 6px 10px;
 }
@@ -14,194 +14,211 @@
     box-sizing: border-box;
 }
 
-body {
+body, h1, p, a, button, input {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+}
+
+body {
+    margin: 0;
 }
 
 img {
     max-width: 100%;
 }
 
-
 header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 5px;
     gap: 10px;
-    vertical-align: auto;   
     border-bottom: 1px solid var(--font-color);
 }
 
 nav {
     width: 100%;
-    margin-top: 20px;   
-    margin-bottom: 20px;
+    margin: 20px 0;
+}
 
-    a {
-        border: 1px solid var(--font-color);
-        margin: 5px;
-        padding: 5px 10px 5px 10px;
-        border-radius: 10px;
-        background-color: var(--barva-tlacitka);
-        color: var(--barva-textu-tlacitka);
-        text-decoration: none;
-    }
-    a:hover {
-        background-color: var(--barva-tlacitka-mys);
-        color: var(--font-color);
-    }
+nav a {
+    border: 1px solid var(--font-color);
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: var(--barva-tlacitka);
+    color: var(--barva-textu-tlacitka);
+    text-decoration: none;
+}
 
+nav a:hover {
+    background-color: var(--barva-tlacitka-mys);
+    color: var(--font-color);
 }
 
 main {
     display: flex;
+    flex-direction: row;
     width: 1150px;
     height: 760px;
-    margin: auto;
-    margin-top: 30px;
+    margin: 30px auto;
     border-radius: var(--zaobleni-rohu);
     background-color: var(--barva-popozadi);
     box-shadow: var(--barva-stinu);
-    h1 {
-        color: var(--font-color);
-    }
-    p {
-        color: var(--font-color);
-        font-weight: 400;
-    }
+}
+
+main h1, main p {
+    color: var(--font-color);
+    margin: 10px 0;
+}
+
+.login-obrazek, .login-form {
+    width: 50%;
+    text-align: center;
 }
 
 .login-obrazek {
-    width: 50%;
     background-image: url(img/login-picture.png);
-    text-align: center;    
+    background-size: cover;
+    border-radius: var(--zaobleni-rohu);
+    padding-top: 40px;
+}
+
+.login-form h1, .login-form .formular-login {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.login-form .formular-login, .login-form-bottom {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.login-form label, .container-checkbox {
+    color: var(--font-color);            
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    display: grid;
+}
+
+.login-form-bottom button {
+    background-color: var(--barva-popozadi);
+    color: var(--font-color);
+}
+
+.login-form-bottom button:hover {
+    background-color: var(--barva-tlacitka-mys);
+    color: var(--font-color);
+}
+
+container-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.text-link-container, .zapomenute-heslo, .nemam-ucet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    gap: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--barva-tlacitka);
+}
+
+a:hover {
+    color: var(--barva-stinu);
+}
+
+button, input {
+    width: 100%;
+    padding: 10px;
     border-radius: var(--zaobleni-rohu);
 }
 
-.login-form {
-    width: 50%;
-    text-align: center;
-    h1 {
+button {
+    margin-top: 35px;
+    background-color: var(--barva-tlacitka);
+    color: var(--barva-textu-tlacitka);
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: var(--barva-tlacitka-mys);
+    color: var(--font-color);
+}
+
+input {
+    outline: none;
+    width: 100%;
+    margin-top: 5px;
+}
+
+input:focus {
+    border-color: var(--font-color);
+}
+
+input::placeholder {
+    color: var(--font-color-vedlejsi);
+    font-style: italic;
+}
+
+
+/* Responzivní design pro tablety */
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        height: auto;
+        flex-direction: column; 
+    }
+
+    .login-obrazek, .login-form {
+        width: 100%; 
+    }
+
+    .login-obrazek {
+        background-image: none;
+    }
+
+    nav {
+        text-align: center; 
+    }
+
+    nav a {
+        display: inline-block; 
+    }
+}
+
+
+/* Responzivní design pro mobilní telefony */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    nav a {
+        margin: 10px 0;
+        padding: 10px;
         width: 100%;
     }
 
-    .formular-login {
-        margin: 0 auto;
-        margin-top: 60px;
-        text-align: center;
-        width: 70%;
-    
-    
-        label {
-            margin-top: 15px;
-            margin-bottom: 5px;
-            text-align: left;
-            display: grid;
-        }
-        input {
-            width: 100%;
-            margin-top: 5px;
-        }
-
-        .container-checkbox {
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding-left: 0; 
-            margin-bottom: 12px;
-            cursor: pointer;
-            color: var(--font-color);
-        }
-    
-        .container-checkbox input {
-            margin-right: 10px; 
-            width: auto; 
-        }
-
-        .text-link-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 15px;
-        }
-
-        p {
-            margin: 0;
-        }
-
-        a {
-            margin: 0;
-            text-decoration: none;
-            color: var(--barva-tlacitka);
-
-        }
-
-        a:hover {
-            color: var(--barva-stinu);
-        }
-
-        button {
-            width: 100%;
-            margin-top: 35px;
-            padding: 10px;
-            border-radius: var(--zaobleni-rohu);
-            background-color: var(--barva-tlacitka);
-            color: var(--barva-textu-tlacitka);
-            font-weight: 600;
-        }
-
-        button:hover {
-            background-color: var(--barva-tlacitka-mys);
-            color: var(--font-color);
-        }
-
-        .zapomenute-heslo {
-            display: flex;
-            width: 56%;
-        }
-
+    .login-form .formular-login, .login-form-bottom {
+        width: 90%;
     }
 
-    .login-form-bottom {
-        width: 70%;
-        text-align: center;
-        margin: 0 auto;
-
-        button {
-            width: 100%;
-            margin-top: 35px;
-            padding: 10px;
-            border-radius: var(--zaobleni-rohu);
-            background-color: rgb(236, 236, 236);
-            color: var(--font-color);
-            font-weight: 600;
-        }
-
-        button:hover {
-            background-color: var(--barva-tlacitka-mys);
-            color: var(--font-color);
-        }
+    button, input {
+        padding: 8px;
     }
-
-    label {
-        color: var(--font-color);
-    }
-
-    input {
-        outline: none; 
-        padding: 10px;
-        border-radius: var(--zaobleni-rohu);
-    }
-
-    input:focus {
-        border-color: var(--font-color); 
-    }
-    
-    input::placeholder {
-        color: var(--font-color-vedlejsi); /* Barva textu v placeholderu */
-        font-style: italic; /* Styl textu v placeholderu */
-    }
-    
 }
-

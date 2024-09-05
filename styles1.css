@@ -1,0 +1,234 @@
+:root {
+    --default-font-size: 16px;
+    --font-color: rgb(1, 95, 1);
+    --font-color-vedlejsi: rgb(67, 141, 67);
+    --barva-tlacitka: rgb(0, 96, 0);
+    --barva-textu-tlacitka: rgb(213, 213, 213);
+    --barva-tlacitka-mys: rgb(126, 175, 126);
+    --zaobleni-rohu: 7px;
+    --barva-popozadi: #ABF1CF;
+    --barva-stinu: rgb(141, 141, 141) 4px 6px 10px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+header {
+    display: flex;
+    margin-top: 5px;
+    gap: 10px;
+    vertical-align: auto;   
+    border-bottom: 1px solid var(--font-color);
+}
+
+nav {
+    width: 100%;
+    margin-top: 20px;   
+    margin-bottom: 20px;
+
+    a {
+        border: 1px solid var(--font-color);
+        margin: 5px;
+        padding: 5px 10px 5px 10px;
+        border-radius: 10px;
+        background-color: var(--barva-tlacitka);
+        color: var(--barva-textu-tlacitka);
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: var(--barva-tlacitka-mys);
+        color: var(--font-color);
+    }
+
+}
+
+main {
+    display: flex;
+    width: 1150px;
+    height: 760px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: var(--zaobleni-rohu);
+    background-color: var(--barva-popozadi);
+    box-shadow: var(--barva-stinu);
+    h1 {
+        color: var(--font-color);
+    }
+    p {
+        color: var(--font-color);
+        font-weight: 400;
+    }
+}
+
+.login-obrazek {
+    width: 50%;
+    background-image: url(img/login-picture.png);
+    text-align: center;    
+    border-radius: var(--zaobleni-rohu);
+}
+
+.login-form {
+    width: 50%;
+    text-align: center;
+    h1 {
+        width: 100%;
+    }
+
+    .formular-login {
+        margin: 0 auto;
+        margin-top: 60px;
+        text-align: center;
+        width: 70%;
+    
+    
+        label {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            text-align: left;
+            display: grid;
+        }
+        input {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .container-checkbox {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-left: 0; 
+            margin-bottom: 12px;
+            cursor: pointer;
+            color: var(--font-color);
+        }
+    
+        .container-checkbox input {
+            margin-right: 10px; 
+            width: auto; 
+        }
+
+        .text-link-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            margin: 0;
+            text-decoration: none;
+            color: var(--barva-tlacitka);
+
+        }
+
+        a:hover {
+            color: var(--barva-stinu);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 35px;
+            padding: 10px;
+            border-radius: var(--zaobleni-rohu);
+            background-color: var(--barva-tlacitka);
+            color: var(--barva-textu-tlacitka);
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: var(--barva-tlacitka-mys);
+            color: var(--font-color);
+        }
+    }
+
+    .login-form-bottom {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+
+        button {
+            width: 100%;
+            margin-top: 35px;
+            padding: 10px;
+            border-radius: var(--zaobleni-rohu);
+            background-color: rgb(236, 236, 236);
+            color: var(--font-color);
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: var(--barva-tlacitka-mys);
+            color: var(--font-color);
+        }
+    }
+
+    label {
+        color: var(--font-color);
+    }
+
+    input {
+        outline: none; 
+        padding: 10px;
+        border-radius: var(--zaobleni-rohu);
+    }
+
+    input:focus {
+        border-color: var(--font-color); 
+    }
+    
+    input::placeholder {
+        color: var(--font-color-vedlejsi); /* Barva textu v placeholderu */
+        font-style: italic; /* Styl textu v placeholderu */
+    }
+
+    .zapomenute-heslo {
+        display: flex;
+        width: 60%;
+        gap: 3px;
+
+        a {
+            margin: 0;
+            text-decoration: none;
+            color: var(--barva-tlacitka);
+
+        }
+
+        a:hover {
+            color: var(--barva-stinu);
+        }
+    }
+    .nemam-ucet {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        gap: 3px;
+
+            a {
+                margin: 0;
+                text-decoration: none;
+                color: var(--barva-tlacitka);
+            }
+
+            a:hover {
+                color: var(--barva-stinu);
+            }
+    }
+}
+
