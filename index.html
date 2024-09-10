@@ -4,27 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Úkolomet</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ctprim: '#015f01',
+              ctsec: '#438d43',
+              cbprim: '#d7ffec',
+              cbsec: '#004200',
+              cbtprim: '#006000',
+              cbtsec: '#7eaf7e',
+              cbttprim: '#d5d5d5',
+              cbttsec: '#015f01',
+            }
+          }
+        }
+      }
+    </script>
 </head>
 
-<body>
-    <header>
-        <a href="./index.html">
-            <img src="./img/logo.webp" alt="logo úkolomet" width="200px">
-        </a>
-        <nav>
-            <a href="#">Dashboard</a>
-            <a href="#">Odkaz 2</a>
-            <a href="#">Odkaz 3</a>
-            <a href="#">Profil</a>
-            <a href="./login.html">Přihlášení</a>
-        </nav>
-        <hr>
-    </header>
+<body class="bg-cbprim font-sans">
+    <div class="w-full lg:w-4/5 xl:w-2/3 mx-auto ">
+        <header class="flex gap-4 py-2 items-center justify-between px-4 pb-12">
+            <a href="./index.html">
+                <img class="w-48 min-w-28 transition duration-700 ease-in-out hover:scale-110" src="./img/logo.webp" alt="logo úkolomet">
+            </a>
+            <nav class="flex gap-4 text-xl ">
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./projekty.html">Projekty</a>
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./ukoly.html">Úkoly</a>
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./reporty.html">Reporty</a>
+            </nav>
+            <div class="flex gap-4 text-xl">
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./dashboard.html">Dashboard</a>
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./profil.html">Profil</a>
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./login.html">Přihlášení</a>
+            </div>
+        </header>
 
-    <main>
-        <h1>Úkolomet</h1>
-        <h2>Vaše úkoly pod kontrolou</h2>
-    </main>
+        <main class="flex flex-col gap-6">
+            <div class="flex flex-col gap-6 text-6xl text-center font-bold text-ctprim">
+                <h1>Mějte své úkoly pod kontrolou</h1>
+                <h2>s Úkolometem je nezapomenete</h2>
+            </div>
+            <a class="text-xl font-bold text-cbttprim bg-cbtprim px-6 py-4 mx-auto rounded-md transition duration-700 ease-in-out hover:text-cbttsec hover:bg-cbtsec my-6" href="#sprava-ukolu">Víc informací</a>
+            <img src="./img/todo-lists.jpg" alt="Obrázek Úkolometu">
+        </main>
+
+        <section id="sprava-ukolu" class="my-12 flex justify-center items-center text-center">
+            <article class="p-6">
+                <p class="text-xl pb-6">Organizace na dosah ruky</p>
+                <p>Tříďte úkoly do kategorií a priorit, což vám pomůže mít vždy přehled o tom, co je důležité a co může počkat.</p>
+            </article>
+
+            <article class="p-6 border-x border-gray-300">
+                <p class="text-xl pb-6">Automatická upomínka</p>
+                <p>Chytré notifikace vám pomohou nikdy nezapomenout na termíny a důležité úkoly.</p>
+            </article>
+
+            <article class="p-6">
+                <p class="text-xl pb-6">Práce napříč zařízeními</p>
+                <p>Ať už používáte telefon, tablet nebo počítač, všechny vaše úkoly stále aktuální.</p>
+            </article>
+        </section>
+
+        <section class="my-12 flex flex-col items-center justify-center gap-12 w-2/3 h-96 mx-auto border border-gray-300 p-12">
+            <h2 class="text-4xl text-ctprim font-bold">Efektivní správa úkolů</h2>
+            <p class="px-30 text-ctprim text-center">Úkolomet je intuitivní webová aplikace pro správu úkolů, která vám pomůže získat kontrolu nad každodenními povinnostmi. Díky jednoduchému a přehlednému rozhraní můžete snadno vytvářet seznamy, nastavovat priority a přidávat termíny splnění. Aplikace vás upozorní na důležité úkoly, synchronizuje data napříč všemi vašimi zařízeními a umožní vám soustředit se na to, co je opravdu důležité. </p>
+        </section>
+
+        <section class="py-12 flex h-dvh">
+            <div class="bg-[url('/img/ukoly.jpg')] bg-cover bg-center w-1/2">
+            </div>
+
+            <div class="flex flex-col pl-12 text-left justify-center gap-12 w-1/2">
+                <h2 class="text-4xl text-ctprim font-bold">S Úkolometem už nikdy nezapomenete na žádný úkol</h2>
+                <a class="text-xl font-bold text-cbttprim bg-cbtprim px-12 py-4 mr-auto rounded-md transition duration-700 ease-in-out hover:text-cbttsec hover:bg-cbtsec my-6" href="./login.html">Vytvořit účet</a>
+        </section>
+
+        <section class="flex flex-col mx-auto text-ctprim w-full lg:w-4/5 xl:w-2/3">
+            <div>
+                <h2 class="text-4xl font-bold pb-12">Jak to funguje?</h2>
+            </div>
+
+            <div class="py-12 pl-32 relative">
+                <h3 class="pb-6 text-xl font-bold">Přihlášení</h3>
+                <p>Přihlášení do aplikace zajistí, že jsou vaše seznamy úkolů chráněny před očima nepovolaných lidí. Díky přihlášení do aplikace také můžete individuálně nastavovat důležité věci, jako je třeba přístrojová deska a další možnosti aplikace.</p>
+                <div class="flex font-bold items-center justify-center w-10 h-10 z-10 text-center text-white top-10 left-0 rounded-full bg-cbtsec absolute ">
+                    <p>1</p>
+                </div>
+                <div class="absolute top-10 left-4 h-full w-2 bg-cbtsec"></div>
+            </div>
+            
+            <div class="py-12 pl-32 relative">
+                <h3 class="pb-6 text-xl font-bold">Vytvoření úkolu</h3>
+                <p>Přidejte nové úkoly jednoduše kliknutím na tlačítko „Přidat úkol“. Zadejte název, popis a nastavte termín splnění. Můžete si také nastavit čas a cenu práce za úkol nebo hodinu.</p>
+                <div class="flex font-bold items-center justify-center w-10 h-10 z-10 text-center text-white top-10 left-0 rounded-full bg-cbtsec absolute ">
+                    <p>2</p>
+                </div>
+                <div class="absolute top-10 left-4 h-full w-2 bg-cbtsec"></div>
+            </div>
+
+            <div class="py-12 pl-32 relative">
+                <h3 class="pb-6 text-xl font-bold">Třídění a organizace</h3>
+                <p>Rozdělte své úkoly do kategorií nebo projektů a nastavte jim priority, abyste vždy věděli, co je důležité.</p>
+                <div class="flex font-bold items-center justify-center w-10 h-10 z-10 text-center text-white top-10 left-0 rounded-full bg-cbtsec absolute ">
+                    <p>3</p>
+                </div>
+                <div class="absolute top-10 left-4 h-full w-2 bg-cbtsec"></div>
+            </div>
+
+            <div class="py-12 pl-32 relative">
+                <h3 class="pb-6 text-xl font-bold">Nastavení připomínek</h3>
+                <p>U každého úkolu můžete nastavit automatické upomínky, které vás upozorní na blížící se termíny.</p>
+                <div class="flex font-bold items-center justify-center w-10 h-10 z-10 text-center text-white top-10 left-0 rounded-full bg-cbtsec absolute ">
+                    <p>4</p>
+                </div>
+                <div class="absolute top-10 left-4 h-full w-2 bg-cbtsec"></div>
+            </div>
+
+            <div class="py-12 pl-32 relative">
+                <h3 class="pb-6 text-xl font-bold">Synchronizace napříč zařízeními</h3>
+                <p>Díky tomu, že se jedná o webovou aplikaci, Vaše úkoly se automaticky synchronizují na všech zařízeních, ať už používáte telefon, tablet nebo počítač.</p>
+                <div class="flex font-bold items-center justify-center w-10 h-10 z-10 text-center text-white top-10 left-0 rounded-full bg-cbtsec absolute ">
+                    <p>5</p>
+                </div>
+                <div class="absolute top-10 left-4 h-full w-2 bg-cbtsec"></div>
+            </div>
+
+            <div class="py-12 pl-32 relative">
+                <h3 class="pb-6 text-xl font-bold">Sledování pokroku</h3>
+                <p>Označujte splněné úkoly a sledujte svůj postup, díky čemuž budete mít vždy přehled o tom, co už máte hotové a co vás ještě čeká.</p>
+                <div class="flex font-bold items-center justify-center w-10 h-10 z-10 text-center text-white top-10 left-0 rounded-full bg-cbtsec absolute ">
+                    <p>6</p>
+                </div>
+            </div>
+            <a class="text-xl font-bold text-cbttprim bg-cbtprim px-12 py-4 mr-auto rounded-md transition duration-700 ease-in-out hover:text-cbttsec hover:bg-cbtsec my-6 ml-32" href="./registrace.html">Vytvořit účet</a>
+        </section>
+    </div>
 </body>
 </html>

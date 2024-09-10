@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úkolomet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ctprim: '#015f01',
+              ctsec: '#438d43',
+              cbprim: '#d7ffec',
+              cbsec: '#004200',
+              cbtprim: '#006000',
+              cbtsec: '#7eaf7e',
+              cbttprim: '#d5d5d5',
+              cbttsec: '#015f01',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+
+<body class="bg-cbprim">
+    <header class="flex gap-4 py-2 items-center justify-between px-4">
+        <a href="./index.html">
+            <img class="w-48 min-w-28 transition duration-700 ease-in-out hover:scale-110" src="./img/logo.webp" alt="logo úkolomet">
+        </a>
+        <nav class="flex gap-4 text-xl ">
+            <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./dashboard.html">Dashboard</a>
+            <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./projekty.html">Projekty</a>
+            <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./ukoly.html">Úkoly</a>
+            <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./reporty.html">Reporty</a>
+            <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./profil.html">Profil</a>
+            <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./login.html">Přihlášení</a>
+        </nav>
+        <div class="flex gap-4 text-xl">
+            <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="#">Dashboard</a>
+            <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="#">Projekty</a>
+            <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="#">Úkoly</a>
+        </div>
+    </header>
+    <hr>
+
+    <main>
+
+    </main>
+</body>
+</html>
