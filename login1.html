@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úkolomet - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <img src="./img/logo.webp" alt="logo úkolomet" width="200px">
+        </a>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Odkaz 2</a>
+            <a href="#">Odkaz 3</a>
+            <a href="#">Profil</a>
+            <a href="./login.html">Přihlášení</a>
+        </nav>
+        <hr>
+    </header>
+        
+
+    <main>
+            <div class="login-obrazek">
+                <h1>Úkolomet</h1>
+                <p>Mějte svoje úkoly pod kontrolou.</p>
+                <p>Po přihlášení můžete zadávat úkoly a organizovat svůj čas.</p>
+            </div>
+
+            <div class="login-form">
+                <h1>Vítej zpět</h1>
+                <p>Vlož svůj email, heslo a přihlaš se do Úkolometu</p>
+                <form action="#" method="get" class="formular-login">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Napiš svůj email" required>
+                    <label for="password">Heslo</label>
+                    <input id="password" type="password" name="password" placeholder="Napiš své heslo" required>
+
+                    <div class="text-link-container">
+                        <label class="container-checkbox">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>Zapamatuj heslo
+                        </label>                    
+                            <div class="zapomenute-heslo">
+                                <p>Zapoměl jsi heslo?  </p><a href="#">Změnit heslo</a>
+                            </div>
+                    </div>
+
+                    <button type="submit">Přihlaš se</button>
+
+                </form>
+
+                <div class="login-form-bottom">
+                    <div class="nemam-ucet">
+                        <p>Nemám účet  </p><a href="#">Registrace</a>
+                    </div>
+                    <p>nebo se přihlas přes</p>
+                    <button>Google</button>
+                    <button>Facebook</button>
+                </div>
+            </div>
+    </main>
+</body>
+</html>

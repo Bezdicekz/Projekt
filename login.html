@@ -1,67 +1,99 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Úkolomet - Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Přihlášení do Úkolometu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ctprim: '#015f01',
+              ctsec: '#438d43',
+              cbprim: '#d7ffec',
+              cbsec: '#004200',
+              cbtprim: '#006000',
+              cbtsec: '#7eaf7e',
+              cbttprim: '#d5d5d5',
+              cbttsec: '#015f01',
+            }
+          }
+        }
+      }
+    </script>
 </head>
+<body class="bg-cbprim font-sans">
+    <div class="w-full mx-auto md:w-4/5 lg:2/3">
+        <header class="flex gap-4 py-2 items-center justify-between px-4 pb-12">
+            <a href="./index.html">
+                <img class="w-48 min-w-28 transition duration-700 ease-in-out hover:scale-110" src="./img/logo.webp" alt="logo úkolomet">
+            </a>
+            <nav class="lg:flex hidden gap-4 text-xl">
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./projekty.html">Projekty</a>
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./ukoly.html">Úkoly</a>
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./reporty.html">Reporty</a>
+            </nav>
+            <div class="lg:flex hidden gap-4 text-xl">
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./dashboard.html">Dashboard</a>
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./profil.html">Profil</a>
+                <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./login.html">Přihlášení</a>
+            </div>
+        </header>
 
-<body>
-    <header>
-        <a href="./index.html">
-            <img src="./img/logo.webp" alt="logo úkolomet" width="200px">
-        </a>
-        <nav>
-            <a href="#">Dashboard</a>
-            <a href="#">Odkaz 2</a>
-            <a href="#">Odkaz 3</a>
-            <a href="#">Profil</a>
-            <a href="./login.html">Přihlášení</a>
-        </nav>
-        <hr>
-    </header>
-        
-
-    <main>
-            <div class="login-obrazek">
-                <h1>Úkolomet</h1>
-                <p>Mějte svoje úkoly pod kontrolou.</p>
-                <p>Po přihlášení můžete zadávat úkoly a organizovat svůj čas.</p>
+        <main class="border border-gray-300 md:flex mx-auto items-center justify-center text-ctprim">
+            <div class="collapse md:flex md:flex-col md:visible md:bg-[url('/img/login-picture.png')] md:bg-size-full md:bg-cover md:bg-center md:text-center md:w-1/2 md:justify-center md:items-center md:py-60 md:gap-2">
+                <h1 class="collapse md:visible md:text-5xl lg:text-7xl md:font-bold md:pb-12">Úkolomet</h1>
+                <p class="collapse md:visible md:text-xl md:font-bold">Mějte svoje úkoly pod kontrolou.</p>
+                <p class="collapse md:visible md:text-xl md:font-bold">Po přihlášení můžete zadávat úkoly a organizovat svůj čas.</p>
             </div>
 
-            <div class="login-form">
-                <h1>Vítej zpět</h1>
-                <p>Vlož svůj email, heslo a přihlaš se do Úkolometu</p>
-                <form action="#" method="get" class="formular-login">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email" placeholder="Napiš svůj email" required>
-                    <label for="password">Heslo</label>
-                    <input id="password" type="password" name="password" placeholder="Napiš své heslo" required>
-
-                    <div class="text-link-container">
-                        <label class="container-checkbox">
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>Zapamatuj heslo
-                        </label>                    
-                            <div class="zapomenute-heslo">
-                                <p>Zapoměl jsi heslo?  </p><a href="#">Změnit heslo</a>
-                            </div>
+            <div class="flex flex-col md:w-1/2">
+                <div class="flex flex-col items-center justify-center">
+                    <div class="md:hidden text-center">
+                        <h1 class="text-5xl font-bold">Úkolomet</h1>
+                        <p class="text-xl">Mějte svoje úkoly pod kontrolou.</p>
+                        <p class="text-xl">Po přihlášení můžete zadávat úkoly a organizovat svůj čas.</p>
                     </div>
+                </div>
 
-                    <button type="submit">Přihlaš se</button>
+                <div class="flex flex-col text-center">
+                    <h1>Vítej zpět</h1>
+                    <p>Vlož svůj email, heslo a přihlaš se do Úkolometu</p>
+                    <form action="#" method="get" class="formular-login">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Napiš svůj email" required>
+                        <label for="password">Heslo</label>
+                        <input id="password" type="password" name="password" placeholder="Napiš své heslo" required>
 
-                </form>
+                        <div class="text-link-container">
+                            <label class="container-checkbox">
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>Zapamatuj heslo
+                            </label>                    
+                                <div class="zapomenute-heslo">
+                                    <p>Zapoměl jsi heslo?  </p><a href="#">Změnit heslo</a>
+                                </div>
+                        </div>
 
-                <div class="login-form-bottom">
-                    <div class="nemam-ucet">
-                        <p>Nemám účet  </p><a href="#">Registrace</a>
+                        <button type="submit">Přihlaš se</button>
+
+                    </form>
+
+                    <div class="login-form-bottom">
+                        <div class="nemam-ucet">
+                            <p>Nemám účet  </p><a href="#">Registrace</a>
+                        </div>
+                        <p>nebo se přihlas přes</p>
+                        <button>Google</button>
+                        <button>Facebook</button>
                     </div>
-                    <p>nebo se přihlas přes</p>
-                    <button>Google</button>
-                    <button>Facebook</button>
                 </div>
             </div>
-    </main>
+        </main>
+
+
+    </div>
 </body>
 </html>
