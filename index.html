@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Úkolomet</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -27,22 +28,49 @@
 
 <body class="bg-cbprim font-sans">
     <div class="w-full mx-auto md:w-4/5 lg:2/3">
+                <!--
+        ---------------- Řádek navigace ----------------
+        -->
         <header class="flex gap-4 py-2 items-center justify-between px-4 pb-12">
             <a href="./index.html">
                 <img class="w-48 min-w-28 transition duration-700 ease-in-out hover:scale-110" src="./img/logo.webp" alt="logo úkolomet">
             </a>
+
             <nav class="lg:flex hidden gap-4 text-xl ">
                 <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./projekty.html">Projekty</a>
                 <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./ukoly.html">Úkoly</a>
                 <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./reporty.html">Reporty</a>
             </nav>
+
             <div class="lg:flex hidden gap-4 text-xl">
                 <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./dashboard.html">Dashboard</a>
                 <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./profil.html">Profil</a>
                 <a class="py-2 px-4 rounded-md transition duration-700 ease-in-out hover:text-white hover:bg-cbtsec" href="./login.html">Přihlášení</a>
             </div>
-        </header>
 
+                <!--
+                ---------------- Hamburgerové menu ----------------
+                -->
+                <div x-data="{open: false}" class="relative lg:hidden py-4 px-8">
+                    <button @click="open = !open">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                    <div class="absolute top-10 right-5 shadow-lg h-64 w-48 p-4 rounded border border-gray-600 space-y-2" x-show="open" @click.away="open = false" x-transition>
+                        <a href="#"><p class="p-2 hover:bg-gray-200 cursor-pointer">Projekty</p></a>
+                        <a href="#"><p class="p-2 hover:bg-gray-200 cursor-pointer">Úkoly</p></a>
+                        <a href="#"><p class="p-2 hover:bg-gray-200 cursor-pointer">Reporty</p></a>
+                        <a href="#"><p class="p-2 hover:bg-gray-200 cursor-pointer">Dashboard</p></a>
+                        <a href="#"><p class="p-2 hover:bg-gray-200 cursor-pointer">Profil</p></a>
+                        <a href="#"><p class="p-2 pt-4 hover:bg-gray-200 cursor-pointer">Přihlášení</p></a>
+                    </div>
+                </div>
+        </header>
+        
+        <!--
+        ---------------- Jednotlivé oddíly Landing Page ----------------
+        -->
         <main class="flex flex-col gap-6 ">
             <div class="flex flex-col gap-6 text-3xl md:text-4xl lg:text-5xl text-center font-bold text-ctprim">
                 <h1>Mějte své úkoly pod kontrolou</h1>
