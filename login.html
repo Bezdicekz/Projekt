@@ -99,35 +99,39 @@
                 </div>
 
                 <div class="flex flex-col text-center">
-                    <h1>Vítej zpět</h1>
-                    <p>Vlož svůj email, heslo a přihlaš se do Úkolometu</p>
-                    <form action="#" method="get" class="formular-login">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="Napiš svůj email" required>
-                        <label for="password">Heslo</label>
-                        <input id="password" type="password" name="password" placeholder="Napiš své heslo" required>
+                    <div class="flex flex-col py-12 font-bold">
+                        <h1 class="text-3xl">Vítej zpět</h1>
+                        <p class="text-xl py-2 font-bold">Vlož svůj email, heslo a přihlaš se do Úkolometu</p>
+                    </div>
+                    <form action="#" method="get" class="flex flex-col w-2/3 text-xl gap-2 py-6 mx-auto justify-center text-center">
+                        <label class="font-bold" for="email">Email</label>
+                        <input class="text-center rounded-lg border border-ctsec py-2" id="email" type="email" name="email" placeholder="Napiš svůj email" required>
+                        <label class="font-bold" for="password">Heslo</label>
+                        <input class="text-center rounded-lg border border-ctsec py-2" id="password" type="password" name="password" placeholder="Napiš své heslo" required>
 
-                        <div class="text-link-container">
-                            <label class="container-checkbox">
+                        <div class="flex gap-6 py-6 justify-center">
+                            <label>
                                 <input type="checkbox" checked="checked">
                                 <span class="checkmark"></span>Zapamatuj heslo
                             </label>                    
-                                <div class="zapomenute-heslo">
-                                    <p>Zapoměl jsi heslo?  </p><a href="#">Změnit heslo</a>
-                                </div>
+                            <div class="flex gap-2">
+                                <p>Zapoměl jsi heslo?  </p>
+                                <a href="#">Změnit heslo</a>
+                            </div>
                         </div>
 
-                        <button type="submit">Přihlaš se</button>
+                        <button class="py-2 rounded-lg bg-cbtprim text-cbttprim hover:bg-cbtsec hover:text-cbttsec" type="submit">Přihlaš se</button>
 
                     </form>
 
-                    <div class="login-form-bottom">
-                        <div class="nemam-ucet">
-                            <p>Nemám účet  </p><a href="#">Registrace</a>
+                    <div class="justify-center">
+                        <div class="flex gap-2 font-bold justify-center pb-6">
+                            <p>Nemám účet  </p>
+                            <a href="#">Registrace</a>
                         </div>
                         <p>nebo se přihlas přes</p>
-                        <button>Google</button>
-                        <button>Facebook</button>
+                        <button class="font-bold">Google</button>
+                        <button class="font-bold">Facebook</button>
                     </div>
                 </div>
             </div>
